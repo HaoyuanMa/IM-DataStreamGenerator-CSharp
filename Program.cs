@@ -22,6 +22,8 @@ namespace DataStreamGenerator
             }).Build();
             await connection.StartAsync();
 
+            await connection.SendAsync("SetOnline", "stream");
+
             var oprator = "";
             while(oprator != "n")
             {
